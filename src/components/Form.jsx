@@ -1,9 +1,22 @@
 import Button from "./Button";
 
 export default function Form() {
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    
+    const formData = new FormData(e.currentTarget)
+    for (let [key, value] of formData.entries()) {
+      console.log({key, value})
+    }
+
+    const birthDate = new Date(year.value, month.value - 1, day.value).toLocaleDateString("fr-FR")
+    console.log(birthDate)
+  }
+
   return (
     <>
-      <form>
+      <form onSubmit={handleSubmit}> 
         <fieldset>
           <label htmlFor="day">DAY</label>
           <input type="number" id="day" name="day" placeholder="DD"/>
@@ -16,10 +29,8 @@ export default function Form() {
           <label htmlFor="year">YEAR</label>
           <input type="number" id="year" name="year" placeholder="YYYY"/>
         </fieldset>
-      </form>
-      <div className="button">
         <Button />
-      </div>
+      </form>
     </>
   );
 }
