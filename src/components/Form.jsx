@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState } from "react";
 import Button from "./Button";
+import InputField from "./InputField";
 
 export default function Form() {
-  const [age, setAge] = useState({ years: '--', months: '--', days: '--' });
-  const [error, setError] = useState('');
+  const [age, setAge] = useState({ years: "--", months: "--", days: "--" });
+  const [error, setError] = useState("");
 
   const calculateAge = (birthDate) => {
     const today = new Date();
@@ -44,20 +45,20 @@ export default function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     const formData = new FormData(e.currentTarget);
-    const day = formData.get('day');
-    const month = formData.get('month');
-    const year = formData.get('year');
+    const day = formData.get("day");
+    const month = formData.get("month");
+    const year = formData.get("year");
 
     const validationError = validateDate(day, month, year);
     if (validationError) {
       setError(validationError);
-      setAge({ years: '--', months: '--', days: '--' });
+      setAge({ years: "--", months: "--", days: "--" });
       return;
     }
 
-    setError('');
+    setError("");
     const birthDate = new Date(year, month - 1, day);
     const ageResult = calculateAge(birthDate);
     setAge(ageResult);
@@ -65,43 +66,26 @@ export default function Form() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}> 
-        <fieldset>
-          <label htmlFor="day">JOUR</label>
-          <input 
-            type="number" 
-            id="day" 
-            name="day" 
-            placeholder="JJ"
-            min="1"
-            max="31"
-            required
-          />
-        </fieldset>
-        <fieldset>
-          <label htmlFor="month">MOIS</label>
-          <input 
-            type="number" 
-            id="month" 
-            name="month" 
-            placeholder="MM"
-            min="1"
-            max="12"
-            required
-          />
-        </fieldset>
-        <fieldset>
-          <label htmlFor="year">ANNÉE</label>
-          <input 
-            type="number" 
-            id="year" 
-            name="year" 
-            placeholder="AAAA"
-            required
-          />
-        </fieldset>
+      <form onSubmit={handleSubmit}>
+        <InputField
+          label="JOUR"
+          name="day"
+          placeholder="JJ"
+          min="1"
+          max="31"
+          required
+        />
+        <InputField
+          label="MOIS"
+          name="month"
+          placeholder="MM"
+          min="1"
+          max="12"
+          required
+        />
+        <InputField label="ANNÉE" name="year" placeholder="AAAA" required />
         {error && <p>{error}</p>}
-        <Button />
+        <Button type="submit">Calculate Age</Button>
         <div>
           <h2>Âge :</h2>
           <p>
