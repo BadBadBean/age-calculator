@@ -71,28 +71,33 @@ export default function Form() {
           label="JOUR"
           name="day"
           placeholder="JJ"
-          min="1"
-          max="31"
+          min={1}
+          max={31}
           required
         />
         <InputField
           label="MOIS"
           name="month"
           placeholder="MM"
-          min="1"
-          max="12"
+          min={1}
+          max={12}
           required
         />
-        <InputField label="ANNÉE" name="year" placeholder="AAAA" required />
+        <InputField 
+          label="ANNÉE" 
+          name="year" 
+          placeholder="AAAA" 
+          required 
+        />
         {error && <p>{error}</p>}
         <Button type="submit">Calculate Age</Button>
+        </form>
         <div>
           <h2>Âge :</h2>
           <p>
             {age.years} ans, {age.months} mois, et {age.days} jours
           </p>
         </div>
-      </form>
     </div>
   );
 }
