@@ -4,11 +4,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(197, 127, 197, 0.717);
+    padding-inline: 20px;
   }
   
   .card {
-    border: 1px solid red;
+    border: 1px solid purple;
     width: 100%;
+    max-width: 800px;
     margin-inline: auto;
     padding: 20px;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }

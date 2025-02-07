@@ -87,17 +87,16 @@ export default function Form() {
           label="ANNÉE" 
           name="year" 
           placeholder="AAAA" 
-          required 
-        />
+          required />
         {error && <p>{error}</p>}
         <Button type="submit">Calculate Age</Button>
-        </form>
-        <div>
-          <h2>Âge :</h2>
-          <p>
-            {age.years} ans, {age.months} mois, et {age.days} jours
-          </p>
-        </div>
+      </form>
+      <div className="age_result">
+        <h2>Âge :</h2>
+        <div><span className="age_output">{age.years}</span> <span className="age_unit">ans</span></div>
+        <div><span className="age_output">{age.months}</span> <span className="age_unit">mois</span></div>
+        <div><span className="age_output">{age.days}</span> <span className="age_unit">jours</span></div>
+      </div>
     </div>
   );
 }

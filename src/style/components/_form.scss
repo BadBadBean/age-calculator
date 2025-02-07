@@ -1,5 +1,9 @@
 form {
   display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    gap: 20px;
 }
 
 label {
@@ -9,4 +13,19 @@ label {
   input {
     width: 80px;
     height: 50px;
+  }
+
+  fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .age_result {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .age_output {
+    color: purple;
   }
