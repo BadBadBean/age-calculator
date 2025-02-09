@@ -65,7 +65,8 @@ export default function Form() {
   };
 
   return (
-    <div>
+    <div className="card_content">
+      <h1>Calculateur d'âge</h1>
       <form onSubmit={handleSubmit}>
         <InputField
           label="JOUR"
@@ -92,7 +93,7 @@ export default function Form() {
         <Button type="submit">Calculate Age</Button>
       </form>
       <div className="age_result">
-        <h2>Âge :</h2>
+        <h2>Vous avez :</h2>
         <div><span className="age_output">{age.years}</span> <span className="age_unit">ans</span></div>
         <div><span className="age_output">{age.months}</span> <span className="age_unit">mois</span></div>
         <div><span className="age_output">{age.days}</span> <span className="age_unit">jours</span></div>
