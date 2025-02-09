@@ -1,0 +1,22 @@
+.age_result {
+  text-align: center;
+}
+
+.age_output {
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    rgba(36, 121, 159, 1) 0%,
+    rgba(38, 152, 157, 1) 35%,
+    rgba(29, 199, 155, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  justify-self: flex-end;
+}
+
+.age_unit {
+  justify-self: flex-start;
+}

@@ -66,8 +66,9 @@ export default function Form() {
 
   return (
     <div className="card_content">
-      <h1>Calculateur d'âge</h1>
+      <h1>Calculateur d&apos;âge</h1>
       <form onSubmit={handleSubmit}>
+      <legend>Entrez votre date de naissance</legend>
         <InputField
           label="JOUR"
           name="day"
@@ -84,7 +85,7 @@ export default function Form() {
           max={12}
           required
         />
-        <InputField 
+        <InputField
           label="ANNÉE" 
           name="year" 
           placeholder="AAAA" 
@@ -94,9 +95,9 @@ export default function Form() {
       </form>
       <div className="age_result">
         <h2>Vous avez :</h2>
-        <div><span className="age_output">{age.years}</span> <span className="age_unit">ans</span></div>
-        <div><span className="age_output">{age.months}</span> <span className="age_unit">mois</span></div>
-        <div><span className="age_output">{age.days}</span> <span className="age_unit">jours</span></div>
+          <div className="age_display"><span className="age_output">{age.years}</span> <span className="age_unit">ans</span></div>
+          <div className="age_display"><span className="age_output">{age.months}</span> <span className="age_unit">mois</span></div>
+          <div className="age_display"><span className="age_output">{age.days}</span> <span className="age_unit">jours</span></div>
       </div>
     </div>
   );

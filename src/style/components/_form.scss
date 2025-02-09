@@ -1,45 +1,59 @@
 form {
   display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-items: center;
-    margin-inline: auto;
-    gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.5fr 1fr 1fr;
+  justify-items: center;
+  margin-inline: auto;
+  margin-bottom: 20px;
+  gap: 20px;
+
+  @media (max-width: 374px) {
+    gap: 10px;
+  }
+}
+
+legend {
+  grid-column: span 3 / span 3;
+  align-self: end;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 label {
-    margin-right: 20px;
-    font-size: 24px;
-  }
-  
-  input {
-    width: 80px;
-    height: 50px;
-    border: transparent;
-    border-radius: 5px;
-  }
+  text-align: center;
+}
 
-  input::placeholder {
-    text-align: center;
-  }
+input {
+  width: 80px;
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #129f9c;
 
-  fieldset {
-    border: none;
-    display: flex;
-    flex-direction: column;
+  @media (max-width: 374px) {
+    width: 70px;
   }
+}
 
-  .age_result {
-    text-align: center;
-    margin-top: 20px;
-  }
+#day {
+  grid-row-start: 2;
+}
 
-  .age_output {
-    color: aqua;
-    font-size: 48px;
-    margin-right: 10px;
-  }
+#month {
+  grid-row-start: 2;
+}
 
-  .age_unit {
-    font-size: 36px;
-  }
+#year {
+  grid-row-start: 2;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+

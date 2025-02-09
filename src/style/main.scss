@@ -1,5 +1,9 @@
+@use './utils/variables';
+
 @use "./base/reset";
 @use "./base/general";
+@use "./base/typography";
 
+@use "./components/ageResult";
 @use "./components/button";
 @use "./components/form";

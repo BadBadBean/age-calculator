@@ -1,0 +1,65 @@
+h1 {
+  text-align: center;
+  font-size: 3em;
+  font-family: "Sour Gummy", serif;
+
+  @media (max-width: 374px) {
+    font-size: 2.5em;
+  }
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+h1,
+.age_output {
+  line-height: 1.3;
+}
+
+h1::before,
+.age_output::before {
+  content: "";
+  margin-bottom: -0.25em;
+  display: table;
+}
+
+h1::after,
+.age_output::after {
+  content: "";
+  margin-top: -0.25em;
+  display: table;
+}
+
+legend {
+  font-size: 1em;
+  font-style: italic;
+}
+
+label {
+  color: #129f9c;
+  font-weight: 700;
+}
+
+input {
+  font-size: 18px;
+  @media (max-width: 374px) {
+    font-size: 15px;
+  }
+}
+
+button {
+  font-family: "Sour Gummy", serif;
+  font-size: 1.5em;
+}
+
+.age_output {
+  font-size: 90px;
+  font-weight: 900;
+  font-family: "Sour Gummy", serif;
+}
+
+.age_unit {
+  font-size: 36px;
+}
