@@ -31,7 +31,7 @@ button::after {
 
 button:hover {
   z-index: 0;
-  box-shadow: 10px 0 30px 9px rgba(29, 199, 154, 0.701),
-    -10px 0 30px 9px rgba(36, 121, 159, 1);
+  box-shadow: 5px 0 20px 9px rgba(29, 199, 154, 0.701),
+    -5px 0 20px 9px rgba(36, 121, 159, 1);
   color: #f0f0f0;
 }

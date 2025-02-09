@@ -1,6 +1,16 @@
+@use "../utils/variables" as *;
+
 body { 
-  color: #3d3d3d;
+  color: $text;
   font-family: "Poppins", serif;
+}
+
+#light {
+  background-image: url("/src/images/background-light.svg");
+}
+
+#dark {
+  background-image: url("/src/images/background-dark.svg");
 }
 
 .container {
