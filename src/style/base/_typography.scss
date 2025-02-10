@@ -45,7 +45,7 @@ label {
 input {
   font-size: 18px;
   @media (max-width: 374px) {
-    font-size: 15px;
+    font-size: 1em;
   }
 }
 
@@ -55,13 +55,13 @@ button {
 }
 
 .age_output {
-  font-size: 90px;
+  font-size: 5em;
   font-weight: 900;
   font-family: "Sour Gummy", serif;
 }
 
 .age_unit {
-  font-size: 30px;
+  font-size: 1.8em;
 }
 
 h1, legend, label, h2, button, .age_unit {
