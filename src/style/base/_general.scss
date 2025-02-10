@@ -1,7 +1,5 @@
-@use "../utils/variables" as *;
-
 body { 
-  color: #3d3d3d;
+  color: var(--text);
   font-family: "Poppins", serif;
 }
 
@@ -12,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   padding-inline: 20px;
-  background-image: url("/src/images/background-light.svg");
+  background-image: var(--background-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

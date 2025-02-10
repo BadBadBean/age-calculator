@@ -1,14 +1,17 @@
 import "./style/main.scss";
 import Form from "./components/Form";
+import Toggle from "./components/Toggle";
 
 function App() {
   return (
+    <>
+    <Toggle />
     <div className="container">
-      {/* <ToggleButton onChange={toggleTheme} checked={theme === "dark"} /> */}
       <div className="card">
         <Form />
       </div>
     </div>
+    </>
   );
 }
 

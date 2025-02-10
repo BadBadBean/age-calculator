@@ -7,32 +7,28 @@ button {
   width: 70%;
   height: 50px;
   margin-block: 15px;
-  border: none;
+  border: var(--input-border);
   border-radius: 1000px;
-  color: inherit;
-  background-color: #f0f0f0;
+  color: var(--text-button-color);
+  background-color: transparent;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
-button::after {
-  content: "";
-  position: absolute;
-  height: 107%;
-  width: 102%;
-  border-radius: 1000px;
-  background: linear-gradient(
-    90deg,
-    rgba(36, 121, 159, 1) 0%,
-    rgba(38, 152, 157, 1) 35%,
-    rgba(29, 199, 155, 1) 100%
-  );
-  z-index: -1;
-}
-
 button:hover {
   z-index: 0;
-  box-shadow: 5px 0 20px 9px rgba(29, 199, 154, 0.701),
-    -5px 0 20px 9px rgba(36, 121, 159, 1);
-  color: #f0f0f0;
+  box-shadow: var(--box-shadow);
+}
+
+/* Toggle button */
+
+.toggle_button {
+  position: absolute;
+  background-color: transparent;
+  top: 25px; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #3d3d3d8c;
 }

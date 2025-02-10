@@ -30,11 +30,12 @@ label {
 
 input {
   width: 80px;
+  color: inherit;
   height: 50px;
   border-radius: 5px;
   text-align: center;
-  border: 1px solid #129f9c;
-  background-color: #f0f0f0;
+  border: var(--input-border);
+  background-color: var(--input-background);
 
   @media (max-width: 374px) {
     width: 70px;
@@ -55,6 +56,7 @@ input {
 
 input::placeholder {
   text-align: center;
+  color: var(--placeholder-color);
 }
 
 
